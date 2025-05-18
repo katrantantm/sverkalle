@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sverkalle - Профессиональный клининг в Краснодаре</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #e63946 0%, #f1faee 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite;
+        }
+        @keyframes bounce-slow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav bg-white/80 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-broom text-red-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Sverkalle</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-red-600 transition">Услуги</a>
+                    <a href="#about" class="text-gray-700 hover:text-red-600 transition">О нас</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-red-600 transition">Цены</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-red-600 transition">Отзывы</a>
+                    <a href="#contact" class="text-gray-700 hover:text-red-600 transition">Контакты</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+78612000000" class="hidden sm:flex items-center text-gray-700 hover:text-red-600 transition">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        <span>+7 (861) 200-00-00</span>
+                    </a>
+                    <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition shadow-md">
+                        Заказать звонок
+                    </button>
+                    <button class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-6 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Профессиональный клининг в Краснодаре</h1>
+                    <p class="text-xl mb-8">Sverkalle - это чистота без компромиссов. Мы используем экологичные средства и современное оборудование.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold shadow-lg transition">
+                            Рассчитать стоимость
+                        </button>
+                        <button class="border-2 border-white hover:bg-white hover:text-red-600 px-8 py-3 rounded-full font-semibold transition">
+                            <i class="fas fa-play mr-2"></i> Смотреть видео
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Чистый дом" 
+                         class="rounded-xl shadow-2xl w-full max-w-lg mx-auto">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-red-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-check text-red-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800">Более 1000</p>
+                                <p class="text-gray-600">довольных клиентов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <div class="bg-white py-8 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="flex items-center">
+                    <i class="fas fa-leaf text-green-500 text-3xl mr-3"></i>
+                    <span class="font-medium">Экологичные средства</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt text-blue-500 text-3xl mr-3"></i>
+                    <span class="font-medium">Гарантия качества</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-user-tie text-purple-500 text-3xl mr-3"></i>
+                    <span class="font-medium">Опытные специалисты</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-yellow-500 text-3xl mr-3"></i>
+                    <span class="font-medium">Работаем 24/7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Наши услуги</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Мы предлагаем полный спектр клининговых услуг для домов, офисов и коммерческих помещений в Краснодаре</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Уборка квартир</h3>
+                    <p class="text-gray-600 mb-4">Комплексная уборка всех помещений с использованием профессионального оборудования и экологичных средств.</p>
+                    <a href="#" class="text-red-600 font-medium flex items-center">
+                        Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Уборка офисов</h3>
+                    <p class="text-gray-600 mb-4">Регулярная и генеральная уборка офисных помещений, включая чистку ковров и мебели.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">
+                        Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-store text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Коммерческая уборка</h3>
+                    <p class="text-gray-600 mb-4">Уборка торговых центров, магазинов, ресторанов и других коммерческих объектов.</p>
+                    <a href="#" class="text-green-600 font-medium flex items-center">
+                        Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tshirt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Химчистка мебели</h3>
+                    <p class="text-gray-600 mb-4">Глубокая чистка диванов, кресел, матрасов и другой мягкой мебели с удалением пятен и запахов.</p>
+                    <a href="#" class="text-purple-600 font-medium flex items-center">
+                        Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-car text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Мойка окон</h3>
+                    <p class="text-gray-600 mb-4">Чистка окон, витрин, фасадов зданий с использованием профессиональных средств и оборудования.</p>
+                    <a href="#" class="text-yellow-600 font-medium flex items-center">
+                        Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hands text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Послеремонтная уборка</h3>
+                    <p class="text-gray-600 mb-4">Тщательная уборка после строительных и ремонтных работ с удалением пыли, краски и других загрязнений.</p>
+                    <a href="#" class="text-indigo-600 font-medium flex items-center">
+                        Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Почему выбирают Sverkalle?</h2>
+                    <p class="text-gray-600 mb-6">Основанная в 2015 году в Краснодаре, наша компания зарекомендовала себя как надежный партнер в сфере профессионального клининга.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="bg-red-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Современное оборудование</h4>
+                                <p class="text-gray-600">Используем профессиональные пылесосы, пароочистители и другое оборудование ведущих мировых брендов.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Экологичные средства</h4>
+                                <p class="text-gray-600">Применяем только безопасные для здоровья и окружающей среды чистящие средства.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Опытные сотрудники</h4>
+                                <p class="text-gray-600">Наши клинеры проходят строгий отбор и регулярное обучение.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Клинер за работой" 
+                         class="rounded-xl shadow-xl w-full">
+                    <div class="absolute -bottom-6 -right-6 bg-red-600 text-white p-6 rounded-xl shadow-lg hidden md:block">
+                        <div class="text-center">
+                            <p class="text-4xl font-bold mb-1">7+</p>
+                            <p class="text-sm">лет на рынке</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Наши тарифы</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Гибкая система ценообразования позволяет подобрать оптимальный вариант для каждого клиента</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
+                    <div class="bg-gray-100 px-6 py-4">
+                        <h3 class="text-xl font-bold text-gray-800">Базовый</h3>
+                        <p class="text-gray-600">Подходит для регулярной уборки</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-800">1 500 ₽</span>
+                            <span class="text-gray-500">/ уборка</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Сухая и влажная уборка полов</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Удаление пыли с поверхностей</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Чистка санузла</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-red-400 mr-2"></i>
+                                <span>Мытье окон</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-red-400 mr-2"></i>
+                                <span>Химчистка мебели</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-lg font-medium transition">
+                            Выбрать тариф
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Standard Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform scale-105 border-2 border-red-500">
+                    <div class="bg-red-500 text-white px-6 py-4">
+                        <h3 class="text-xl font-bold">Стандарт</h3>
+                        <p>Самый популярный вариант</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-800">2 500 ₽</span>
+                            <span class="text-gray-500">/ уборка</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Все из Базового тарифа</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Мытье окон внутри</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Чистка кухонных поверхностей</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Уборка балкона/лоджии</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-red-400 mr-2"></i>
+                                <span>Химчистка мебели</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-medium transition">
+                            Выбрать тариф
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg">
+                    <div class="bg-gray-800 text-white px-6 py-4">
+                        <h3 class="text-xl font-bold">Премиум</h3>
+                        <p>Полный комплекс услуг</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-gray-800">4 500 ₽</span>
+                            <span class="text-gray-500">/ уборка</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Все из Стандартного тарифа</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Химчистка 1 предмета мебели</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Мытье окон с двух сторон</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Глубокая чистка ковров</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Удаление сложных пятен</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-lg font-medium transition">
+                            Выбрать тариф
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white rounded-xl shadow-md p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Индивидуальный расчет</h3>
+                <p class="text-gray-600 text-center mb-8">Точную стоимость уборки можно рассчитать, отправив нам параметры вашего помещения</p>
+                <div class="flex flex-col md:flex-row justify-center">
+                    <button class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-medium transition mb-4 md:mb-0 md:mr-4">
+                        <i class="fas fa-calculator mr-2"></i> Рассчитать стоимость
+                    </button>
+                    <button class="border-2 border-gray-300 hover:border-red-600 text-gray-800 hover:text-red-600 px-8 py-3 rounded-lg font-medium transition">
+                        <i class="fas fa-question-circle mr-2"></i> Задать вопрос
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Отзывы наших клиентов</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Более 1000 довольных клиентов в Краснодаре и Краснодарском крае</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                                <span class="text-red-600 font-bold">А</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Анна К.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Заказывала генеральную уборку после ремонта. Приехали вовремя, работали аккуратно и качественно. Квартира просто сияет! Особенно порадовало, что использовали экологичные средства - у меня маленький ребенок, это важно."</p>
+                    <div class="mt-4 text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i> 15 мая 2023
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <span class="text-blue-600 font-bold">Д</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Дмитрий С.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Работаем со Sverkalle уже больше года - убирают наш офис 3 раза в неделю. Всегда пунктуальны, ответственные сотрудники. Заметно, что люди знают свое дело. Рекомендую!"</p>
+                    <div class="mt-4 text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i> 2 апреля 2023
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                <span class="text-green-600 font-bold">Е</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Елена В.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Заказала химчистку дивана и кресла - результат превзошел ожидания! Пятна от кофе и следы от фломастеров (дети у меня художники) исчезли полностью. Диван выглядит как новый. Спасибо за качественную работу!"</p>
+                    <div class="mt-4 text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i> 22 марта 2023
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-3 rounded-full font-medium transition">
+                    <i class="fas fa-comment-alt mr-2"></i> Оставить отзыв
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-red-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">Готовы к безупречной чистоте?</h2>
+                    <p class="text-xl">Оставьте заявку и получите скидку 10% на первую уборку!</p>
+                </div>
+                <div class="lg:w-1/2">
+                    <form class="flex flex-col sm:flex-row gap-4">
+                        <input type="tel" placeholder="Ваш телефон" class="flex-grow px-6 py-3 rounded-full focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-white text-red-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold shadow-md transition whitespace-nowrap">
+                            Получить скидку
+                        </button>
+                    </form>
+                    <p class="text-sm mt-3 text-red-100">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Частые вопросы</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ответы на самые популярные вопросы о наших услугах</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium text-gray-800">Какие средства вы используете для уборки?</h3>
+                        <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Мы используем профессиональные экологичные средства ведущих мировых брендов, таких как Ecolab, Diversey и др. Все они безопасны для здоровья людей и домашних животных, имеют сертификаты соответствия и не вызывают аллергических реакций.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium text-gray-800">Нужно ли мне присутствовать во время уборки?</h3>
+                        <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Присутствие не обязательно. Вы можете оставить ключи нашему сотруднику (при необходимости подписать договор о материальной ответственности) или предоставить доступ другими удобными способами. Многие наши клиенты пользуются услугами удаленно.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium text-gray-800">Как быстро можно заказать уборку?</h3>
+                        <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Мы стараемся максимально оперативно реагировать на заявки. В большинстве случаев можем организовать уборку в тот же день, если заявка поступила до 14:00. Для срочных заказов (в течение 2-3 часов) предусмотрена дополнительная плата 20% к стоимости услуги.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium text-gray-800">Даете ли вы гарантию на свою работу?</h3>
+                        <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Да, мы предоставляем гарантию 3 дня на все виды уборок. Если вас что-то не устроит в качестве выполнения работы, мы бесплатно устраним все недочеты. На химчистку мебели гарантия составляет 14 дней.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium text-gray-800">Можно ли заказать уборку в выходные или праздники?</h3>
+                        <i class="fas fa-chevron-down text-red-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Да, мы работаем 7 дней в неделю, включая праздничные дни. Уборка в выходные и праздники оплачивается по стандартным тарифам, без дополнительных наценок. Единственное исключение - 1 января, в этот день мы не работаем.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Контакты</h2>
+                    <p class="text-gray-600 mb-8">Мы всегда рады помочь вам и ответить на все вопросы. Свяжитесь с нами удобным для вас способом.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Адрес</h4>
+                                <p class="text-gray-600">г. Краснодар, ул. Красная, 180, офис 45</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Телефон</h4>
+                                <p class="text-gray-600">+7 (861) 200-00-00</p>
+                                <p class="text-gray-600">+7 (988) 240-00-00 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-600">info@sverkalle.ru</p>
+                                <p class="text-gray-600">booking@sverkalle.ru (для заказов)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Режим работы</h4>
+                                <p class="text-gray-600">Пн-Пт: 8:00 - 20:00</p>
+                                <p class="text-gray-600">Сб-Вс: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">Мы в соцсетях</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 rounded-xl shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Оставьте заявку</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                            </div>
+                            <div class="mb-6">
+                                <label for="service" class="block text-gray-700 font-medium mb-2">Услуга</label>
+                                <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                    <option value="">Выберите услугу</option>
+                                    <option value="apartment">Уборка квартиры</option>
+                                    <option value="office">Уборка офиса</option>
+                                    <option value="commercial">Коммерческая уборка</option>
+                                    <option value="furniture">Химчистка мебели</option>
+                                    <option value="windows">Мойка окон</option>
+                                    <option value="after_repair">Послеремонтная уборка</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Дополнительная информация</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-medium transition shadow-md">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full bg-gray-200">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4d2e4c7e1a4a3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e
+</html>
